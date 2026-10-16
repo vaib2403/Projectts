@@ -1,0 +1,88 @@
+// THIS IS THE CODE OF COUNTER PROGRAM WHICH HAS INCREASE, DECREASE AND RESET BUTTON 
+
+
+/* ------- HTML ------ */
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./counter.css">
+</head>
+
+<body>
+    <div class="body1">
+        <label id="countLabel">0</label><br>
+        <div id="countButtons">
+            <button id="decreaseBtn" class="buttons1">Decrease</button>
+            <button id="resetBtn" class="buttons1">Reset</button>
+            <button id="increaseBtn" class="buttons1">Increase</button>
+        </div>
+    </div>
+
+
+
+    <script src="./counter.js"></script>
+</body>
+
+</html>
+
+  /* ------- HTML END ------ */
+
+
+  /* ------- CSS ------ */
+
+  #countLabel {
+    display: block; 
+    text-align: center;
+    font-size: 100px;
+    font-family: helvetica;
+}
+#countButtons {
+    text-align: center;
+}
+.buttons1 {
+    padding: 10px 20px;
+    margin-left: 10px;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttons1:hover {
+    background-color: rgb(67, 0, 130);
+}
+
+.body1 {
+    background-color: red ;
+    padding: 30px 5%;
+    border-radius: 4rem;
+}
+
+/* ------- CSS END ------ */
+
+
+/* ------- JS ------ */
+
+let count = 0;
+document.getElementById("decreaseBtn").onclick = function(){
+    count--;
+    document.getElementById("countLabel").textContent = count;
+}
+document.getElementById("increaseBtn").onclick = function(){
+    count++;
+    document.getElementById("countLabel").textContent = count;
+}
+document.getElementById("resetBtn").onclick = function(){
+    count = 0;
+    document.getElementById("countLabel").textContent = count;
+}
+
+/* ------- JS END ------ */
